@@ -25,6 +25,7 @@ app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 app.use('/stokvels', stokvelRoutes);
 app.use('/sync', syncRoutes);
+app.use('/debug', require('./routes/debug'));
 
 // Catch-all error handler so a thrown error never crashes the whole process.
 app.use((err, req, res, next) => {
